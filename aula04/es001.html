@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+
+<body>
+    <h1> Brasileiro ou Estrangeiro</h1>
+    <p>De que país você é ? </p>
+    <input type="text" name="nac" id="inac">
+    <input type="button" value="Enter" onclick="verificar()">
+    <div id="pais">
+
+    </div>
+    <script>
+        function verificar() {
+            var nacional = document.querySelector('input#inac').value
+            var res = document.querySelector('div#pais')
+            res.innerHTML = `<p>Você é do <strong>${nacional}</strong></p>`
+
+            if (nacional === 'Brasil') {
+                res.innerHTML += (`Você é <strong>Brasileiro</strong>!`)
+            } else {
+                res.innerHTML += (`Você é <strong>Estrangeiro</strong>!`)
+            }
+        }
+    </script>
+</body>
+
+</html>
